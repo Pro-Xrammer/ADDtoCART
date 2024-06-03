@@ -1,0 +1,26 @@
+[
+    {
+        "id": " 1",
+        "imagePath": "../src/assets/images/images.jpg",
+        "name": "Watch",
+        "price": 1200
+    },
+    {
+        "id": " 2",
+        "imagePath": "../src/assets/images/images1.jpg",
+        "name": "Headphones",
+        "price": 1800
+    },
+    {
+        "id": " 3",
+        "imagePath": "../src/assets/images/images2.jpg",
+        "name": "Bag",
+        "price": 1500
+    },
+    {
+        "id": " 4",
+        "imagePath": "../src/assets/images/shoes.jpg",
+        "name": "Shoes",
+        "price": 2000
+    }
+]
