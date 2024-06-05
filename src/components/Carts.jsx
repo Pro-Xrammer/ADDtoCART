@@ -13,45 +13,46 @@ const Carts = () => {
     return (
         <>
 
-            <div className='flex justify-center gap-[6rem]'>
 
-                {
-                    data.map((item) => {
-                        return (
-                            <div className=' border-4 my-[4rem] border-red-500 ' key={item.id}>
-                                <div className='w-[200px]'>
-                                    <h2>{item.name}</h2>
-                                    <p>{item.price}</p>
-                                    <img className='h-[200px]' src={item.imagePath} alt="" />
-
-                                </div>
-                                <div className='flex justify-center py-5'>
-                                    <button className='bg-slate-800 text-white rounded-md p-[4px] px-3' onClick={() => additems(item)}>Add To Cart</button>
-                                </div>
-                            </div>
-                        )
-                    })
-                }
-
-            </div>
-
-            <Link to={"/addtocart/1"}>
-                <button className='ml-[15rem] bg-slate-800 text-white p-[10px] px-4 rounded-full my-[4px]' >Go to Full Details</button>
-            </Link>
-            <Link to={"/addtocart/2"}>
-                <button className='ml-[10rem] bg-slate-800 text-white p-[10px] px-4 rounded-full my-[4px]' >Go to Full Details</button>
-            </Link>
-            <Link to={"/addtocart/3"}>
-                <button className='ml-[9rem] bg-slate-800 text-white p-[10px] px-4 rounded-full my-[4px]' >Go to Full Details</button>
-            </Link>
-            <Link to={"/addtocart/4"}>
-                <button className='ml-[10rem] bg-slate-800 text-white p-[10px] px-4 rounded-full my-[4px]' >Go to Full Details</button>
-            </Link>
-            <Link to={"/ItemsinCart"}>
-                <div className='flex justify-center mt-[30px]'>
-                    <button className='bg-slate-600 flex  text-white p-[20px] px-[40px]'> Items In Cart<FaCartShopping className='relative top-1 left-8 ' /> {cart.length}</button>
+            <div className=' bg-[#C0C0C0] md:h-screen h-[2800px]'>
+                <div className='border-b-2 border-gray-800 pb-[10px] pt-[5px]'>
+                    <h1 className='font-semibold text-[30px]'>
+                        HOME PAGE
+                    </h1>
                 </div>
-            </Link>
+
+                <div className='flex justify-center gap-[6rem] text-center flex-wrap '>
+
+                    {
+                        data.map((item) => {
+                            return (
+                                <div className='  my-[4rem] px-[2rem]  bg-[#F5F5F5] shadow-2xl ' key={item.id}>
+                                    <div className='w-[200px] font-bold'>
+                                        <h2 classname="">{item.name}</h2>
+                                        <p>{item.price}</p>
+                                        <img className='h-[200px]' src={item.imagePath} alt="" />
+
+                                    </div>
+                                    <div className='flex justify-center py-5'>
+                                        <button className='p-[10px] border-2 hover:bg-black hover:text-white  border-[#222222] font-semibold rounded-xl mt-[20px]' onClick={() => additems(item)}>Add Product</button>
+                                    </div>
+                                    <Link to={`/addtocart/${item.id}`}>
+                                        <div className='flex justify-center'>
+                                            <button className='p-[10px] border-2 hover:bg-black hover:text-white  border-[#222222] font-semibold rounded-xl mb-[20px]' >Product Details</button>
+                                        </div>
+                                    </Link>
+                                </div>
+                            )
+                        })
+                    }
+
+                </div>
+                <Link to={"/ItemsinCart"}>
+                    <div className='flex justify-center mt-[30px] '>
+                        <button className='bg-slate-600 flex  text-white p-[20px] px-[40px]'>  {cart.length} <FaCartShopping className='relative top-1 left-2 ' /></button>
+                    </div>
+                </Link>
+            </div>
         </>
     )
 }

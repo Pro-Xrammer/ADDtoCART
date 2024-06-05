@@ -1,26 +1,30 @@
 [
     {
-        "id": " 1",
+        "id": 1,
         "imagePath": "../src/assets/images/images.jpg",
-        "name": "Watch",
-        "price": 1200
+        "name": "Smart Watch Pro",
+        "price": "$249.99",
+        "descripition":"Discover the perfect blend of style, functionality, and advanced technology with our Smart Watch Pro. Designed for those who seek a dynamic lifestyle, this smartwatch offers a suite of features to help you stay connected, healthy, and active."
     },
     {
-        "id": " 2",
+        "id": 2,
         "imagePath": "../src/assets/images/images1.jpg",
-        "name": "Headphones",
-        "price": 1800
+        "name": " Ear Headphones",
+        "price": "$199.99",
+        "descripition" : "Experience the ultimate in sound quality and comfort with our High-Definition Over-Ear Headphones. Designed for audiophiles and music enthusiasts, these headphones deliver an unparalleled listening experience."
     },
     {
-        "id": " 3",
+        "id": 3,
         "imagePath": "../src/assets/images/images2.jpg",
-        "name": "Bag",
-        "price": 1500
+        "name": "Urban  Backpack",
+        "price": "$129.99",
+        "descripition":"Elevate your daily adventures with our Urban Explorer Backpack. Designed for both functionality and style, this versatile backpack is perfect for commuters, students, travelers, and outdoor enthusiasts."
     },
     {
-        "id": " 4",
+        "id": 4,
         "imagePath": "../src/assets/images/shoes.jpg",
-        "name": "Shoes",
-        "price": 2000
+        "name": " Running Shoes",
+        "price": "$149.99",
+        "descripition":"Experience unparalleled comfort and performance with our Elite Performance Running Shoes. Engineered for athletes and running enthusiasts, these shoes provide the perfect blend of support, durability, and style to help you reach your peak performance."
     }
 ]
