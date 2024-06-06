@@ -8,16 +8,28 @@ export const context = createContext();
 const Content = ({ children }) => {
     const [cart, setcart] = useState([]);
     const additems = (items) => {
-        setcart([...cart, items])
-        toast("Added Sucessfully", {
-            position: "top-center",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-          });
+        if (cart.find((curritem) => curritem.id === items.id)) {
+            toast("Item Already Added", {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            })
+        } else {
+            setcart([...cart, items])
+            toast("Added Sucessfully", {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
+        }
     }
     const deleteitems = (id) => {
         setcart(cart.filter((item) => item.id !== id))
@@ -29,14 +41,14 @@ const Content = ({ children }) => {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-          });
+        });
     }
 
     return (
-        <context.Provider value={{ cart, additems, deleteitems}} >
+        <context.Provider value={{ cart, additems, deleteitems }} >
             {children}
         </context.Provider>
-        
+
     )
 }
 

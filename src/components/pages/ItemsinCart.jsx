@@ -11,7 +11,7 @@ const ItemsinCart = () => {
                     CART PAGE
                 </h1>
             </div>
-            <div className='flex  justify-center border-2 w-full  pt-[3rem] bg-[#C0C0C0] md:h-screen h-[1400px] '>
+            <div className='flex  justify-center border-2 w-full  pt-[3rem] bg-[#C0C0C0] md:h-screen h-full'>
 
                 {
 
@@ -21,11 +21,11 @@ const ItemsinCart = () => {
                             <div className='flex gap-9 justify-center flex-wrap'>
                                 {
                                     cart.map((item, index) => (
-                                        <div key={index} className='border-2 h-[400px] bg-[#F5F5F5] p-9'>
+                                        <div key={index} className='border-2 h-[400px] bg-[#F5F5F5] px-[2rem]'>
                                             <h1 className='font-bold'>{item.name}</h1>
                                             <p className='py-3'>Price: {item.price}</p>
-                                            <img className='w-[200px]' src={item.imagePath} alt={item.name} />
-                                            <button className='p-[10px] px-[20px] border-2 hover:bg-black hover:text-white border-[#222222] font-semibold rounded-xl  mb-[10px]'
+                                            <img className='w-[170px]' src={item.imagePath} alt={item.name} />
+                                            <button className='p-[10px] px-[20px] border-2 hover:bg-black hover:text-white border-[#222222] font-semibold rounded-xl mt-[10px] '
                                                 onClick={() => deleteitems(item.id)}>
                                                 Delete</button>
                                         </div>

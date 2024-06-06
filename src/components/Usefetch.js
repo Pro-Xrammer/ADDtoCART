@@ -2,10 +2,6 @@ import { useState, useEffect } from "react";
 const Usefetch = (url) => {
     const [data, setData] = useState([]);
     const [error, seterror] = useState(null);
-    const [count, setcount] = useState(0);
-    const handleclick = () => {
-        setcount(count + 1);
-    }
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -19,7 +15,7 @@ const Usefetch = (url) => {
         }
         fetchData();
     }, [url])
-    return { data, error, count, handleclick };
+    return { data };
 }
 export default Usefetch;
 

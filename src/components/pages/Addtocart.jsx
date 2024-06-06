@@ -19,27 +19,30 @@ const Addtocart = () => {
           DETAILS PAGE
         </h1>
       </div>
-      <div className=' flex justify-center items-center h-screen bg-[#C0C0C0] '>
+      <div className=' flex justify-center items-center h-screen  bg-[#C0C0C0] '>
         {item ? (
-          <div className='w-[450px]  flex flex-col justify-center items-center  text-center bg-[#F5F5F5] p-[4rem]  shadow-2xl text-[15px]  '>
-            <h1 className='font-semibold '><span className='font-bold'>Product Name:</span> {item.name}</h1>
-            <p className='font-semibold mb-[10px]'> <span className='font-bold'>Product Name:</span>{item.price}</p>
-            <img className='w-[200px] ' src={item.imagePath} alt={item.name} />
-            <div className='flex'>
-              <h1 className='text-center '>
-                <span className='font-bold m-[10px]'> Descripition </span> <br />
-                {item.descripition}
-                <div>
-                  <button className='p-[10px] border-2 hover:bg-black hover:text-white  border-[#222222] font-semibold rounded-xl mt-[20px]'
-                    onClick={() => { additems(item) }}> Add Product  </button>
-                  <Link to="/">
-                    <button className='p-[10px] px-[20px] border-2 hover:bg-black hover:text-white border-[#222222] font-semibold rounded-xl mt-[10px] mx-[10px]'>
-                      Home Page
-                    </button>
-                  </Link>
-                </div>
-              </h1>
+          <div className='flex md:h-[490] h-[500px]  md:flex-row flex-col shadow-2xl'>
+            <img className='md:w-[450px]' src={item.imagePath} alt={item.name} />
+            <div className='w-[450px]  bg-[#F5F5F5] p-[4rem] '>
+              <h1 className='font-bold text-[20px] '><span className='font-semibold'>Product Name:</span> {item.name}</h1>
+              <p className='font-bold mb-[10px] text-[20px]'> <span className='font-semibold'>Product Name:</span>{item.price}</p>
 
+              <div className='flex'>
+                <h1 className=' '>
+                  <span className=' underline mb-3 font-bold text-[20px]'> Descripition </span> <br />
+                  {item.descripition}
+                  <div>
+                    <button className='p-[10px] border-2 hover:bg-black hover:text-white  border-[#222222] font-semibold rounded-xl mt-[20px]'
+                      onClick={() => { additems(item) }}> Add Product  </button>
+                    <Link to="/">
+                      <button className='p-[10px] px-[20px] border-2 hover:bg-black hover:text-white border-[#222222] font-semibold rounded-xl mt-[10px] mx-[10px]'>
+                        Home Page
+                      </button>
+                    </Link>
+                  </div>
+                </h1>
+
+              </div>
             </div>
           </div>
 
